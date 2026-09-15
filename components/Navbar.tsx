@@ -12,7 +12,7 @@ const links = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Education", href: "#education" },
-  { name: "Now", href: "/now" },      
+  { name: "Now", href: "/now" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -21,9 +21,13 @@ export default function Navbar() {
   const [active, setActive] = useState("");
 
   useEffect(() => {
+    // Only observe hash-anchor links — skip route links like /now
     const sections = links
+      .filter((l) => l.href.startsWith("#"))
       .map((l) => document.querySelector(l.href))
       .filter(Boolean) as Element[];
+
+    if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
