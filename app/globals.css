@@ -104,3 +104,21 @@ a {
 @media print {
   .no-print { display: none !important; }
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.serif {
+  font-feature-settings: "kern", "liga", "calt", "ss01";
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}

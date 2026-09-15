@@ -76,6 +76,49 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.description}
               </p>
 
+              <div className="mt-14 grid gap-8 md:grid-cols-3">
+                <div>
+                  <p
+                    className="text-xs uppercase tracking-widest"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    The Challenge
+                  </p>
+                  <p className="mt-3 text-sm leading-7" style={{ color: "var(--muted)" }}>
+                    Building a production-grade system that mirrors real-world requirements
+                    while integrating modern AI capabilities and secure data handling.
+                  </p>
+                </div>
+
+                <div>
+                  <p
+                    className="text-xs uppercase tracking-widest"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    The Approach
+                  </p>
+                  <p className="mt-3 text-sm leading-7" style={{ color: "var(--muted)" }}>
+                    Architected a modular full-stack solution with clean separation between
+                    frontend, backend, and database layers. Prioritized type safety,
+                    role-based access, and scalable data modeling.
+                  </p>
+                </div>
+
+                <div>
+                  <p
+                    className="text-xs uppercase tracking-widest"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    The Outcome
+                  </p>
+                  <p className="mt-3 text-sm leading-7" style={{ color: "var(--muted)" }}>
+                    A fully functional {project.title.toLowerCase()} with {project.features.length}+
+                    features, deployed and production-ready. Demonstrates end-to-end
+                    ownership from architecture to implementation.
+                  </p>
+                </div>
+              </div>
+
               <h2 className="serif mt-14 text-3xl">Key Features</h2>
               <ul className="mt-5 space-y-3">
                 {project.features.map((feature) => (

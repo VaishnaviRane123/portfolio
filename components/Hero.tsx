@@ -39,6 +39,15 @@ export default function Hero() {
               {profile.summary}
             </p>
 
+            <p
+              className="mt-4 max-w-xl text-sm leading-7"
+              style={{ color: "var(--muted)" }}
+            >
+              Currently building full-stack projects with Next.js and exploring
+              AI-powered applications. Based in {profile.location.split(",")[0]},
+              open to remote and on-site opportunities.
+            </p>
+
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#projects"
@@ -67,7 +76,7 @@ export default function Hero() {
 
           <div className="md:justify-self-end">
             <div
-              className="aspect-[4/5] w-full max-w-[350px] overflow-hidden rounded-[2px] border"
+              className="aspect-[4/5] w-full max-w-[350px] overflow-hidden rounded-[2px] border transition-shadow duration-300 hover:shadow-xl"
               style={{
                 borderColor: "var(--border)",
                 backgroundColor: "var(--hover)",

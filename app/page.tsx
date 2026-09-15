@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AIChat from "@/components/AIChat";  // ← add this
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <AIChat />  {/* ← add this */}
     </>
   );
 }
